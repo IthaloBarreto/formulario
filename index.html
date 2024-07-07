@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <main class="container">
+        <h2>Preencha o formulário</h2>
+        <form data-form>
+            <fieldset class="form__name">
+                <label for="name">Nome</label>
+                <input name="nome" id="name" type="text" required placeholder="Digite seu nome" minlength="3">
+                <span class="error__message"></span>
+            </fieldset>
+            <fieldset class="form__email">
+                <label for="email">Email</label>
+                <input name="email" id="email" type="email" required placeholder="Digite seu email" minlength="4">
+                <span class="error__message"></span>
+            </fieldset>
+            <fieldset class="form__rg">
+                <label for="rg">RG</label>
+                <input name="rg" id="rg" type="text" required placeholder="Digite seu RG">
+                <span class="error__message"></span>
+            </fieldset>
+            <fieldset class="form__cpf">
+                <label for="cpf">CPF</label>
+                <input name="cpf" id="cpf" type="text" required placeholder="Digite seu CPF" minlength="11" maxlength="14" pattern="\d{3}\.?\d{3}\.?\d{3}-?\d{2}">
+                <span class="error__message"></span>
+            </fieldset>
+            <fieldset class="form__date">
+                <label for="aniversario">Data de nascimento</label>
+                <input name="aniversario" id="aniversario" type="date" required>
+                <span class="error__message"></span>
+            </fieldset>
+            <fieldset class="button">
+                <button id="button" type="submit">
+                    ENVIAR
+                </button>
+            </fieldset>
+            <div class="terms">
+                <input name="termos" required id="checkbox" type="checkbox">
+                <p>Li e estou ciente quanto as condições de tratamento dos meus dados conforme descrito na Política de Privacidade</p>
+                <span class="error__message"></span>
+            </div>
+        </form>
+    </main>
+    <script src="./js/script.js" type="module"></script>
+</body>
+</html>
